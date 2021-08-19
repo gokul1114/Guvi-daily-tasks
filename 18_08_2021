@@ -1,0 +1,48 @@
+1. Statically typed vs dynamically typed language.
+
+Statically typed languages - do type checking at compile-time eg. C
+Dynamically-typed languages - are those where the interpreter assigns variables a type at runtime based on the variable's value at the time. eg. Javascript
+
+
+2. DIFFERENCE BETWEEN PROGRAMING LANGUAGE VS SCRIPTING LANGUAGE.
+
+All scripting languages are programming languages, all programming languages are not scripting languages.
+Key differences
+
+Programming language -  a set of instructions to the computer to perform certain tasks.
+                        not need to be interpreted by another language or application.
+                        use a compiler.
+                        they are self-executable; they do not require a host.
+                        runs faster since compilers read and analyse the code at once and collectively report errors but takes additional translation times to translate the source to machine code..
+                        higher level of abstraction from machine languages.
+                        less error-prone, easy to find and debug errors.
+                        more memory as executable files are created.
+                        
+Scripting language - written exclusively for a special runtime environment to automate a specific action.
+                     interpreted within another program.
+                     two subcategories - Server-side scripting languages and client-side scripting languages.
+                     slower as interpreter reads and analyses a code line by line, and every time it detects an error, it stops addressing them one by one.
+                     can run on any operating system.
+                     less memory because no executable file is created.
+                     
+                     
+3. Http1.1 vs Http2
+
+HTTP is the method computers and servers use to request and send information
+
+Prioritization
+       prioritization refers to the order in which pieces of content are loaded. 
+       HTTP/2 offers a feature called weighted prioritization.
+       Multiplexing :
+       In HTTP/2, when a client makes a request for a webpage, the server sends several streams of data to the client at once, instead of sending one thing after another. This method of data delivery is known as multiplexing.
+       
+       Developers can assign each of these data streams a different weighted value, and the value tells the client which data stream to render first.
+       this makes http2 faster than http1.1.
+       
+Server push. 
+       allowing a server to "push" or send server assets to a client before the client asks for it.
+       
+Header compression.
+        HTTP/2 uses a more advanced compression method called HPACK that eliminates redundant information in HTTP header packets.
+        This eliminates a few bytes from every HTTP packet.
+         
