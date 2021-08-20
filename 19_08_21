@@ -18,6 +18,13 @@ don't have require predefined but can be included it in our app for asynchronous
 processes response objects.
 Moduling is not mandatory in client side.
 
+2) 
+traverse HTML tags and build the DOM tree.
+process CSS markup and build the CSSOM tree.( inline(first priotiy) > embedded > external )
+DOM combined with CSSOM to form render tree.
+Run layout on the render tree to compute the exact position and size of each object.
+Paint the individual nodes to the screen.
+
 3) 
 It is not necessary to use HTML,head, body tags. Most browser are are capable of converting the code into html and body tags.
 
