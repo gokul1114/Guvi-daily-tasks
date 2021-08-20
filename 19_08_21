@@ -1,0 +1,42 @@
+1)
+Node js vs Browser js
+Note :  Both use same Javascript Engine.
+Node js : 
+executes javascript code at server side.
+doesn't have a predefined window, document and location object
+has global, which is a predefined global object. It contains several functions needed for server side works.
+require object is predefined in Node which is used to include modules in the app.
+everything is a module
+headless.
+processes request object.
+
+Browser js :
+executes javascript code at client side.
+have predefined window, document and location objects.
+may have an object named global, but it will be the exact one as "window".
+don't have require predefined but can be included it in our app for asynchronous file loading.
+processes response objects.
+Moduling is not mandatory in client side.
+
+3) 
+It is not necessary to use HTML,head, body tags. Most browser are are capable of converting the code into html and body tags.
+
+
+4)
+typeof(1) : number
+typeof(1.1) : number
+typeof('1.1') : string
+typeof(true) : boolean
+typeof(null) : object
+typeof(undefined) : undefined
+typeof([]) : object
+typeof({}) : object
+typeof(NaN) : number
+
+5)
+Prototype
+
+The prototype is an object that is associated with every functions and objects by default in JavaScript.
+Function's prototype property is accessible and modifiable and object's prototype property is not visible.
+Every function includes prototype object by default.
+special type of enumerable object to which additional properties can be attached to it which will be shared across all the instances of it's constructor function.
