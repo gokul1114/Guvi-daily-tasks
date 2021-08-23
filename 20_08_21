@@ -1,0 +1,153 @@
+1) Different for loops in javascript
+
+a) FOR... IN and FOR.. FOR..OF
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  let myData = 
+  {"firstName":"govind", "lastName":"s" , address : ["no.3", "gandhi nagar","chenai"]};
+for(let i in myData){
+    if(i === "address") {
+        counter = 1;
+    for(let j of myData[i]){
+        console.log("address line"+ " " +counter+ " : " +j);
+        counter ++;
+    }}
+    else{
+        console.log(myData[i]);
+    }
+    }
+  
+});
+
+-----------------------------------------------------------------------------------------
+B) FOREACH()
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  let myData = {
+"students":[
+  {"firstName":"govind", "lastName":"s"},
+  {"firstName":"Ram", "lastName":"Kumar"},
+  {"firstName":"berbin", "lastName":"Jose"}
+],
+"class" : "guvi"
+};
+for(let i in myData){
+    if(typeof(myData[i]) === "object") {
+    myData[i].forEach(myFunction)
+    }
+    else {
+        console.log(i + " : " + myData[i]);
+    }
+
+}
+
+function myFunction(value, index, array) {
+    console.log(value)
+   // console.log(index)
+    //console.log(array)
+}
+});
+--------------------------------------------------------------------------------------
+
+FOR
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  let myData = {
+"students":[
+  {"firstName":"govind", "lastName":"s"},
+  {"firstName":"Ram", "lastName":"Kumar"},
+  {"firstName":"berbin", "lastName":"Jose"}
+],
+"class" : "guvi"
+};
+for(let i in myData){
+    if(typeof(myData[i]) === "object") {
+    for(itr = 0 ; itr < myData[i].length; itr ++) {
+        console.log(myData[i][itr]);
+    }
+        
+    }}
+});
+
+
+---------------------------------------------------------------------------------------
+2) My resume data in JSON format and traversing them.
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+  let myData = {"name":"Gokulakrishnan S", "age":23, "address" : "132, Sadras East, Kalpakkam, 603102", "teck_stack" : ["HTML","CSS","Javascript","React JS","C","Java","Spring","SQL"], "Experience" : "1 year"};
+for(let i in myData){
+    if(i !== "teck_stack") {
+    console.log(i+" : "+myData[i]);
+    }
+    else{
+        
+        let tech_Stack_array = myData[i];
+        console.log("Teck Stack : ")
+        for(let itr = 0; itr < tech_Stack_array.length; itr++) {
+           console.log(tech_Stack_array[itr]);
+        }
+        
+    }
+
+}
+  
+});
+
+
+
+
+
