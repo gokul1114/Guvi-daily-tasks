@@ -1,0 +1,104 @@
+1) How to compare two JSON have the same properties without order?
+/ Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+
+var obj1 = { name: "Person 1", age:5 };
+var obj2 = { age:5, name: "Person 1" };
+
+let isEqual = true;
+for(var x in obj1) {
+    for(var y in obj2) {
+          if(x == y ){
+            if(obj1[x]  === obj2[y]){
+                
+            }
+            else {
+                isEqual = false;
+                break;
+            }
+          }
+    }
+}
+console.log(isEqual);
+});
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+2) Use the rest countries API url -> https://restcountries.eu/rest/v2/all and display all the country flags in console
+
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+
+const Http = new XMLHttpRequest();
+const url='https://restcountries.eu/rest/v2/all';
+Http.open("GET", url);
+Http.send();
+//let  responseData = JSON.parse(Http.responseText);
+Http.onreadystatechange = (e) => {
+  responseData =  JSON.parse(Http.responseText);
+  ///console.log(responseData);
+  for(let x of responseData) {
+    console.log(x.name + " : " + x.flag);
+  }
+}
+});
+
+---------------------------------------------------------------------------------------------------------------------------------
+
+3) Use the same rest countries and print all countries name, region, sub region and population
+
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+
+const Http = new XMLHttpRequest();
+const url='https://restcountries.eu/rest/v2/all';
+Http.open("GET", url);
+Http.send();
+//let  responseData = JSON.parse(Http.responseText);
+Http.onreadystatechange = (e) => {
+  responseData =  JSON.parse(Http.responseText);
+  ///console.log(responseData);
+  counter = 1;
+  for(let x of responseData) {
+    
+    console.log(counter + "\nName : "+x.name + "\n" + "Region : "+x.region + "\nSub Region : "+x.subregion + "\nPopulation : "+x.population);
+    counter++;
+  }
+}
+
+});
