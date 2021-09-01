@@ -1,0 +1,182 @@
+1) https://github.com/rvsp/typescript-oops/blob/master/Practice/Movie.md
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+  //start-here
+  //Your code goes here … replace the below line with your code logic 
+ class Movie{
+    constructor(title,studio,rating="PG") {
+        this.title = title;
+        this.studio = studio;
+        this.rating = rating;
+    }
+}
+let mov1 = new Movie("Casino Royale","Eon Productions");
+let mov2 = new Movie("abc","def","PG1");
+let mov3 = new Movie("ghi","jkl","PG");
+let mov4 = new Movie("mno","pqr","PG10");
+let mov5 = new Movie("stu","vwx","PG");
+let mov6 = new Movie("yza","bcd","PG10");
+
+const movieArr = [mov1,mov2,mov3,mov4,mov5,mov6];
+console.log(getPG(movieArr));
+function getPG(movieArr) {
+    resultArr = []
+    for(var x of movieArr){
+        if(x.rating == "PG") {
+            resultArr.push(x.title);
+        }
+    }
+    return resultArr;
+}
+//console.log(mov1)
+
+  //end-here
+});
+
+
+-------------------------------------------------------------------------------
+2)UML to code 
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+//   start-here
+//   Your code goes here … replace the below line with your code logic 
+ class Circle{
+    constructor(radius="1.0",color="red") {
+        this.radius = radius;
+        this.color = color;
+    }
+    
+  Circle() {
+  console.log(this.radius,this.color);  
+ }
+ getRadius(){
+     return this.radius;
+ }
+ 
+setRadius(radius) {
+    this.radius = radius;
+}
+ setColor(color) {
+     this.color = color;
+ }
+ getColor() {
+     return this.color
+ }
+ toStr(obj) {
+ 
+ return this.getRadius() + this.getColor();  
+}
+
+circumference() {
+    return this.radius*2*3.14;
+}
+
+area() {
+    return this.radius*this.radius*3.14;
+}
+}
+
+
+
+let obj = new Circle("1","red")
+obj.Circle();
+console.log(obj.toStr());
+console.log(obj.circumference())
+console.log(obj.area())
+
+
+
+});
+
+----------------------------------------------------------------------------------------------------
+3)Person class
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+//   start-here
+//   Your code goes here … replace the below line with your code logic 
+ class person{
+     constructor(personName="",personAge="",personSalary=""){
+         this.personName = personName;
+         this.personAge = personAge;
+         this.personSalary = personSalary;
+         
+     }
+ }
+let person1 =  new person("abc","23","50000");
+console.log(person1);
+
+});
+
+----------------------------------------------------------------------------------------
+4) Uber fair
+
+// Getting input via STDIN
+const readline = require("readline");
+
+const inp = readline.createInterface({
+  input: process.stdin
+});
+
+const userInput = [];
+
+inp.on("line", (data) => {
+  userInput.push(data);
+});
+
+inp.on("close", () => {
+//   start-here
+//   Your code goes here … replace the below line with your code logic 
+ class Uber{
+     constructor(startKM,destKM){
+         this.startKM = startKM;
+         this.destKM= destKM;
+         
+     }
+     
+     totalFair() {
+         return "total fair = " + (+this.destKM - +this.startKM)*10;
+     }
+ }
+let ride1 =  new Uber("5000","5010");
+console.log(ride1.totalFair());
+
+});
