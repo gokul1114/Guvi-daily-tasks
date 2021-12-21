@@ -1,0 +1,223 @@
+1
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+ alert( "I’m JavaScript!");
+ </script>
+ Whats the error in this ?
+</body>
+</html
+
+Error : Changed double quotes
+-----------------------------------------
+
+fix.html
+
+<!DOCTYPE html>
+<html>
+<body>
+ <script src=”script.js”></script>
+</body>
+</html>
+
+scripts.js
+
+alert("I’m invoked!");
+
+Error : Double quotes
+
+------------------------------------------
+3
+Javascript is not strict script language which demands ; at the end of each line.
+Its also works good when a single code is written on mutliple lines since the js transpiler first interprets the code line by line which helps it understand the end of line.
+
+-----------------------------------------
+4
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+admin = fname+" "+lname;
+alert(admin);
+
+Error : added space
+
+-----------------------------------------
+5
+let admin=9, fname=10.5; 
+fname = "Guvi";
+lname = "geek"
+let name = fname+" "+lname;
+alert( `hello ${name}` );
+
+error : cp;pn is changed to back ticks
+
+-----------------------------------------
+6
+let a = +prompt("First number?");
+let b = +prompt("Second number?");
+alert(a + b);
+
+error : type casting to number from string
+
+-----------------------------------------
+7
+let a = +prompt("First number?");
+let b = +prompt("Second number?");
+alert(a + b);
+
+error : type casting to number from string
+
+-----------------------------------------
+8
+initially its comparing string comparison. In that case it compares the first digit and decides which is bigger.
+inorder to diffuse, do a numeric comparison
+
+-----------------------------------------
+9
+let a = +prompt("Enter a number? ");
+a = a-a
+//Don't modify any code below this
+if (a) {
+ console.log( 'OMG it works for any number inc 0');
+}
+else
+{
+ console.log( "Success" );
+}
+
+error : type cast the input to number.subracting the input integer with the same value to get "success"
+
+-----------------------------------------
+10
+let value = prompt('How many runs you scored in this ball');
+if (value == 4) {
+      console.log("You hit a Four");
+} else if (value == 6) {
+      console.log("You hit a Six");
+} else {
+      console.log("I couldn't figure out");
+}
+
+error: "===" to "=="
+
+-----------------------------------------
+11
+let login = 'Employee';
+let message = (login == 'Employee') ? 'Welcome Employee':
+  (login == 'Director') ? 'Greetings' :
+  (login == '') ? 'No login' :
+  '';
+console.log(message);
+
+error :  adding "Welcome message" message for true condition of the terinary operator
+
+---------------------------------------
+12
+let message;
+if (null || 2 || undefined)
+{
+  message = "welcome boss";
+}
+else
+{
+  message = "Go away";
+}
+  console.log(message);
+  
+  error : message was redfined inside if. So just declared message only once.
+  
+ ----------------------------------------
+ 13
+ let message;
+let lock = 2;
+//Dont change any code below this 
+if (null && lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+  console.log(message);
+  
+error : || makes the condition true because of "lock" variable so change it to &&
+
+------------------------------------------
+14
+let message;
+let lock = 2;
+//Dont change any code below this 
+if (null && lock || undefined )
+{
+  message = "Go away";
+}
+else
+{
+ message = "welcome";
+}
+  console.log(message);
+  
+error : change " " to lock
+
+------------------------------------------
+15
+let i = 3;
+while (i) {
+  console.log(i)
+  i--
+}
+
+error  : printing decremented i. Instead decrement i seperately;
+
+-----------------------------------------
+16
+for(let i=1; i<=10; i++) {
+console.log(i)
+}
+
+-----------------------------------------
+17
+for (let num = 2; num <= 20; num += 1) {
+  if(num%2 == 0){
+    console.log(num)
+  }
+}
+
+----------------------------------------
+18
+let gifts = ["teddy bear", "drone", "doll"];
+for (let i = 0; i < 3; i++) {
+  console.log(`Wrapped ${gifts[i]} and added a bow!`);
+}
+
+error : quotes to back tick
+-----------------------------------------
+19
+let countdown = 100;
+while (countdown > 0) {
+  countdown--;
+  if(countdown == -1)
+  {
+   console.log("bomb triggered");
+  }
+}
+
+ERROR : Bomb condition equal to 0. Now changed to -1
+
+-----------------------------------------
+20
+
+"Hi" is printed beccause string "0" is considered as true.
+------------------------------------------
+
+GUVI: Zen Class — Part 2 : Find the culprits and nail them — debugging javascript loops
+
+
+
+
+ 
+
+
+
